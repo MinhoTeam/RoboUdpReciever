@@ -1,0 +1,6 @@
+/dev/ttyS4#SerialPort
+57600#SerialPortBaudRate
+172.16.49.2#MyAddress
+172.16.49.50#DestinationAddress
+1111#MyPort
+2221#DestinationPort
