@@ -5,16 +5,11 @@ bool SerialPort::ConnectSerial()
     if (serial.open(QIODevice::ReadWrite))
     {
         myMain->connect(&serial, SIGNAL(readyRead()),myMain, SLOT(readResponse()));
-        /*QMessageBox msgBox;
-        msgBox.setText("Open!");
-        msgBox.exec();*/
+        qDebug() << "SerialOpen";
     }
     else
     {
-        QMessageBox msgBox;
-        msgBox.setText("Erro: "+serial.errorString());
-        msgBox.exec();
-
+        qDebug() << "Erro: "<<serial.errorString();
     }
     return true;
 }
