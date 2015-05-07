@@ -62,6 +62,7 @@ void MainWindow::readPendingDatagrams()
    if(lidoUDP.contains(":") && lidoUDP.contains("\n")){
        lidoUDP.replace(":","");
        mySerial->write(lidoUDP);
+       qDebug() << lidoUDP;
        lidoUDP = "";
    }
 }
